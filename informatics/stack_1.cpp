@@ -1,0 +1,39 @@
+#include <bits/stdc++.h>
+using namespace std;
+stack<string>st;
+int main(){
+  bool run=true;
+  while(run){
+    string s;
+    cin>>s;
+    if (s=="push"){
+      string n;
+      cin>>n;
+      st.push(n);
+      cout<<"ok\n";
+    }
+    if(s =="pop"){
+      cout<<st.top()<<"\n";
+      st.pop();
+      
+    }
+    if (s == "back"){
+      cout<<st.top()<<"\n";
+    }
+    if(s=="size"){
+      cout<<st.size()<<"\n";
+    }
+    if (s=="clear"){
+      while(!st.empty()){
+        st.pop();
+      }
+      cout<<"ok\n";
+    }
+     if (s =="exit"){
+      cout<<"bye"<<endl;
+      run=false;
+    }
+
+  }
+  return 0;
+}
